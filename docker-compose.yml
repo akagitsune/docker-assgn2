@@ -1,0 +1,8 @@
+version: '3'
+services:
+    web-serv:
+        image: "akagitsune/web-service:flask-app"
+        ports:
+        - "5000:5000"
+    redisdb:
+        image: "redis:alpine"
