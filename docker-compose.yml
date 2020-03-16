@@ -4,5 +4,9 @@ services:
         image: "akagitsune/web-service:flask-app"
         ports:
         - "5000:5000"
+        deploy:
+            replicas: 5
     redisdb:
         image: "redis:alpine"
+        deploy:
+            replicas: 1
