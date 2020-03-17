@@ -6,7 +6,13 @@ services:
         - "5000:5000"
         deploy:
             replicas: 5
+            placement:
+                constraints:
+                    - node.role == worker
     redisdb:
         image: "redis:alpine"
         deploy:
             replicas: 1
+            placement:
+                constraints:
+                    - node.role == manager
